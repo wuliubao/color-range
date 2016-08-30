@@ -9,9 +9,6 @@ helloDemo.directive('colorRange', function () {
         template: '',
 
         link: function (scope, elem, attrs) {
-            console.log(elem);
-            console.log(attrs.rangeColor);
-            console.log(document.body);
             if (attrs.ngModel) {
                 var startPoint = (attrs.value / attrs.max) * 100;
                 elem[0].style.backgroundImage = "linear-gradient(to right, "+attrs.rangeColor+" 0%,"+attrs.rangeColor+" " + startPoint + "%,#cccccc " + startPoint + "%,#cccccc 100%)";
